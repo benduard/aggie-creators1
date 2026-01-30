@@ -1,0 +1,35 @@
+/* Hero Image Seamless Integration */
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    /* Add a subtle fade mask at the edges to blend with white bg if needed, 
+     but first let's try a clean placement with a soft shadow. */
+    box-shadow: 0 20px 40px -10px rgba(48, 49, 69, 0.1);
+    transform: perspective(1000px) rotateY(-2deg) rotateX(2deg);
+    transition: transform 0.5s ease;
+}
+
+.hero-image-wrapper:hover {
+    transform: perspective(1000px) rotateY(0) rotateX(0);
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* If the image has a specific tint that clashes with white, we can adjust here.
+     The user said "seamlessly", so we ensure it fits the grid. */
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+/* Adjust hero grid for better image placement */
+@media (min-width: 992px) {
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        /* Give more space to image */
+        align-items: center;
+    }
+}

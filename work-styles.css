@@ -1,0 +1,26 @@
+/* Work Images */
+.work-img-wrapper {
+    width: 100%;
+    aspect-ratio: 16/10;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--img-placeholder-bg);
+    border: 1px solid var(--img-placeholder-border);
+    transition: border-color 0.2s, transform 0.3s ease;
+}
+
+.work-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.work-card:hover .work-img-wrapper {
+    border-color: var(--color-primary);
+    /* Optional: Lift effect */
+}
+
+.work-card:hover .work-img {
+    transform: scale(1.05);
+}

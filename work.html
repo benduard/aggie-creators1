@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="public/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="work-styles.css">
+    <title>Work | Aggie Creators</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-wrapper">
+                <img src="public/logo.png" alt="Aggie Creators" class="logo">
+                <span class="logo-text">Aggie Creators</span>
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html#services">Services</a>
+                <a href="work.html" class="text-primary">Work</a>
+                <a href="index.html#process">Process</a>
+                <a href="index.html#pricing">Pricing</a>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="btn btn-primary">Get a Free Demo</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="heading-1 text-center" style="margin-bottom: 32px;">Our Work</h1>
+
+                <div class="filter-chips"
+                    style="display: flex; gap: 12px; justify-content: center; margin-bottom: 48px; flex-wrap: wrap;">
+                    <button class="chip active">All</button>
+                    <button class="chip">Portfolio</button>
+                    <button class="chip">Business</button>
+                    <button class="chip">Redesign</button>
+                </div>
+
+                <div class="work-grid">
+                    <!-- Work Item 1 -->
+                    <div class="work-card">
+                        <div class="work-img-placeholder"></div>
+                        <div class="work-info">
+                            <h4>Reveille Portfolio</h4>
+                            <p>Student Portfolio • 300% Engagement Increase</p>
+                        </div>
+                    </div>
+                    <!-- Work Item 2 -->
+                    <div class="work-card">
+                        <div class="work-img-placeholder"></div>
+                        <div class="work-info">
+                            <h4>Century Square Cafe</h4>
+                            <p>Local Business • Online Ordering Integration</p>
+                        </div>
+                    </div>
+                    <!-- Work Item 3 -->
+                    <div class="work-card">
+                        <div class="work-img-placeholder"></div>
+                        <div class="work-info">
+                            <h4>Engineering Dept</h4>
+                            <p>Redesign • Accessibility Overhaul</p>
+                        </div>
+                    </div>
+                    <!-- Work Item 4 -->
+                    <div class="work-card">
+                        <div class="work-img-placeholder"></div>
+                        <div class="work-info">
+                            <h4>Startup Aggieland</h4>
+                            <p>Business • Branding & Launch</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-box" style="margin-top: 80px; text-align: center;">
+                    <h2 class="heading-2">Ready to start?</h2>
+                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="public/logo.png" alt="Aggie Creators" class="logo-sm"
+                    style="filter: brightness(0) saturate(100%) invert(83%) sepia(21%) saturate(268%) hue-rotate(349deg) brightness(87%) contrast(85%); width: 32px; height: auto;">
+                <p>Aggie Creators</p>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 Aggie Creators. Built in College Station.
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .chip {
+            padding: 8px 24px;
+            border-radius: 99px;
+            border: 1px solid rgba(48, 49, 69, 0.2);
+            background: transparent;
+            font-weight: 500;
+            cursor: pointer;
+            color: var(--color-dark);
+            transition: all 0.2s;
+        }
+
+        .chip:hover {
+            background: rgba(48, 49, 69, 0.05);
+        }
+
+        .chip.active {
+            background: var(--color-dark);
+            color: var(--color-bg);
+            border-color: var(--color-dark);
+        }
+    </style>
+</body>
+
+</html>

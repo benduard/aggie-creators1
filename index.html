@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="public/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="hero-styles.css">
+  <link rel="stylesheet" href="work-styles.css">
+  <link rel="stylesheet" href="content-styles.css">
+  <link rel="stylesheet" href="mobile-styles.css">
+
+  <title>Aggie Creators | High-End Student Website Designs</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-inner">
+        <div class="logo-wrapper">
+          <img src="public/logo.png" alt="Aggie Creators" class="logo">
+          <span class="logo-text">Aggie Creators</span>
+        </div>
+
+        <nav class="desktop-nav">
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#process">Process</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#about">About</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#contact" class="btn btn-primary">Get a Free Demo</a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu">
+          <nav class="mobile-nav">
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#work" class="mobile-link">Work</a>
+            <a href="#process" class="mobile-link">Process</a>
+            <a href="#pricing" class="mobile-link">Pricing</a>
+            <a href="#contact" class="mobile-link btn btn-primary">Get a Free Demo</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-content animate-on-scroll">
+            <h1 class="display-text">Websites that turn portfolios into opportunities.</h1>
+            <p class="hero-sub delay-100">College Station web development for student portfolios, creators, and local
+              businesses.
+              Clean design. Modern builds. Real results.</p>
+            <div class="hero-buttons delay-200">
+              <a href="#work" class="btn btn-primary">View Work</a>
+              <a href="#contact" class="btn btn-secondary">Get a Free Demo</a>
+            </div>
+          </div>
+          <div class="hero-visual animate-on-scroll delay-300">
+            <!-- Hero Image -->
+            <div class="hero-image-wrapper">
+              <img src="public/hero-bg.png" alt="Aggie Creators Web Design" class="hero-img">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="section services-section animate-on-scroll">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="heading-2">What We Build</h2>
+          </div>
+          <div class="services-grid">
+            <!-- Card 1 -->
+            <div class="card service-card animate-on-scroll delay-100">
+              <div class="icon-box">🌐</div>
+              <h3 class="heading-3">Portfolio Websites</h3>
+              <p>Showcase your work with a professional site that stands out to recruiters and clients.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card service-card animate-on-scroll delay-200">
+              <div class="icon-box">💼</div>
+              <h3 class="heading-3">Business Websites</h3>
+              <p>High-conversion landing pages and full sites for local businesses and startups.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card service-card animate-on-scroll delay-300">
+              <div class="icon-box">⚡</div>
+              <h3 class="heading-3">Redesign + Speed</h3>
+              <p>Modernize your existing site and optimize it for lightning-fast performance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Work Preview -->
+      <section id="work" class="section work-section">
+        <div class="container">
+          <div class="section-top">
+            <h2 class="heading-2">Featured Work</h2>
+            <a href="work.html" class="btn btn-text">View All Projects →</a>
+          </div>
+
+          <div class="work-grid">
+            <!-- Work Item 1 -->
+            <div class="work-card animate-on-scroll delay-100">
+              <div class="work-img-wrapper">
+                <img src="public/portfolio-mockup.png" alt="Reveille Portfolio Project" class="work-img">
+              </div>
+              <div class="work-info">
+                <h4>Reveille Portfolio</h4>
+                <p>Student Portfolio • 300% Engagement Increase</p>
+              </div>
+            </div>
+
+            <!-- Work Item 2 -->
+            <div class="work-card animate-on-scroll delay-200">
+              <div class="work-img-wrapper">
+                <img src="public/cafe-mockup.png" alt="Century Square Cafe Project" class="work-img">
+              </div>
+              <div class="work-info">
+                <h4>Century Square Cafe</h4>
+                <p>Local Business • Online Ordering Integration</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section id="process" class="section process-section">
+        <div class="container">
+          <h2 class="heading-2 text-center">How We Work</h2>
+          <div class="process-steps">
+            <div class="step animate-on-scroll delay-100">
+              <span class="step-num">01</span>
+              <h3>Discover</h3>
+            </div>
+            <div class="step-line animate-on-scroll delay-100"></div>
+            <div class="step animate-on-scroll delay-200">
+              <span class="step-num">02</span>
+              <h3>Design</h3>
+            </div>
+            <div class="step-line animate-on-scroll delay-200"></div>
+            <div class="step animate-on-scroll delay-300">
+              <span class="step-num">03</span>
+              <h3>Develop</h3>
+            </div>
+            <div class="step-line animate-on-scroll delay-300"></div>
+            <div class="step animate-on-scroll delay-400">
+              <span class="step-num">04</span>
+              <h3>Launch</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Aggie Creators -->
+      <section class="section why-section">
+        <div class="container why-grid">
+          <div class="why-content">
+            <h2 class="heading-2">Why Aggie Creators?</h2>
+            <p class="lead-text">We don't just build websites; we build digital assets that work for you.</p>
+            <ul class="why-list">
+              <li>
+                <span class="check-icon">✓</span>
+                Clear hierarchy & readability
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                Responsive on every device
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                Designed for conversion & clarity
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Bar -->
+      <div class="stats-section animate-on-scroll">
+        <div class="container stats-grid">
+          <div class="stat-item">
+            <h3>50+</h3>
+            <p>Projects Launched</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Client Satisfaction</p>
+          </div>
+          <div class="stat-item">
+            <h3>24h</h3>
+            <p>Average Response Time</p>
+          </div>
+          <div class="stat-item">
+            <h3>4.9/5</h3>
+            <p>Average Rating</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <section class="section testimonial-section">
+        <div class="container">
+          <div class="section-header text-center animate-on-scroll">
+            <h2 class="heading-2">What People Say</h2>
+            <p class="lead-text" style="max-width: 600px; margin: 0 auto;">Trusted by students and local businesses
+              across College Station.</p>
+          </div>
+          <div class="carousel-container">
+            <!-- Fade Overlay Edges -->
+            <div class="carousel-fade-left"></div>
+            <div class="carousel-fade-right"></div>
+
+            <div class="carousel-track">
+              <!-- Original Set -->
+              <!-- Testimonial 1 -->
+              <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <p class="testimonial-text">Aggie Creators transformed my portfolio. I went from sending out PDFs to
+                  having a professional site that recruiters actually complimented.</p>
+                <div class="author-info">
+                  <div class="author-avatar">JD</div>
+                  <div class="author-details">
+                    <h4>Jane Doe</h4>
+                    <span>Industrial Engineering '26</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 2 -->
+              <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <p class="testimonial-text">The speed and design quality are unmatched. They understood exactly what our
+                  coffee shop needed to handle online orders efficiently.</p>
+                <div class="author-info">
+                  <div class="author-avatar">MK</div>
+                  <div class="author-details">
+                    <h4>Mike K.</h4>
+                    <span>Owner, Century Square Cafe</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 3 (New) -->
+              <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <p class="testimonial-text">I landed my dream internship at a top agency thanks to the portfolio they
+                  built. The design really made my projects pop.</p>
+                <div class="author-info">
+                  <div class="author-avatar">SL</div>
+                  <div class="author-details">
+                    <h4>Sarah L.</h4>
+                    <span>Graphic Design '25</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 4 (New) -->
+              <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <p class="testimonial-text">Super easy to work with and very affordable for a student budget. The
+                  process was explained clearly every step of the way.</p>
+                <div class="author-info">
+                  <div class="author-avatar">ET</div>
+                  <div class="author-details">
+                    <h4>Emily T.</h4>
+                    <span>Communications '27</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 5 (New) -->
+              <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <p class="testimonial-text">Our student org needed a better way to showcase events. Aggie Creators
+                  delivered a site that tripled our signup rate.</p>
+                <div class="author-info">
+                  <div class="author-avatar">DR</div>
+                  <div class="author-details">
+                    <h4>David R.</h4>
+                    <span>President, Aggie Coding Club</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Duplicate Set for Seamless Loop -->
+              <!-- Testimonial 1 -->
+              <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <p class="testimonial-text">Aggie Creators transformed my portfolio. I went from sending out PDFs to
+                  having a professional site that recruiters actually complimented.</p>
+                <div class="author-info">
+                  <div class="author-avatar">JD</div>
+                  <div class="author-details">
+                    <h4>Jane Doe</h4>
+                    <span>Industrial Engineering '26</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 2 -->
+              <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <p class="testimonial-text">The speed and design quality are unmatched. They understood exactly what our
+                  coffee shop needed to handle online orders efficiently.</p>
+                <div class="author-info">
+                  <div class="author-avatar">MK</div>
+                  <div class="author-details">
+                    <h4>Mike K.</h4>
+                    <span>Owner, Century Square Cafe</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 3 -->
+              <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <p class="testimonial-text">I landed my dream internship at a top agency thanks to the portfolio they
+                  built. The design really made my projects pop.</p>
+                <div class="author-info">
+                  <div class="author-avatar">SL</div>
+                  <div class="author-details">
+                    <h4>Sarah L.</h4>
+                    <span>Graphic Design '25</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 4 -->
+              <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <p class="testimonial-text">Super easy to work with and very affordable for a student budget. The
+                  process was explained clearly every step of the way.</p>
+                <div class="author-info">
+                  <div class="author-avatar">ET</div>
+                  <div class="author-details">
+                    <h4>Emily T.</h4>
+                    <span>Communications '27</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 5 -->
+              <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <p class="testimonial-text">Our student org needed a better way to showcase events. Aggie Creators
+                  delivered a site that tripled our signup rate.</p>
+                <div class="author-info">
+                  <div class="author-avatar">DR</div>
+                  <div class="author-details">
+                    <h4>David R.</h4>
+                    <span>President, Aggie Coding Club</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="section">
+        <div class="container">
+          <h2 class="heading-2 text-center animate-on-scroll">Frequently Asked Questions</h2>
+          <div class="faq-section animate-on-scroll delay-100">
+            <div class="faq-item">
+              <button class="faq-question">
+                How long does a project take?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Most portfolio sites are launched within 3-5 days. Larger business projects typically take 2-4 weeks,
+                  depending on complexity.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                Do you handle hosting and domains?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, we can set everything up for you. We typically recommend cost-effective hosting solutions for
+                  students (often free) and scalable options for businesses.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                Can I update the site myself?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Absolutely. For dynamic content, we can set up a CMS (Content Management System) so you can easily
+                  edit text and images without touching code.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="section pricing-section">
+        <div class="container">
+          <h2 class="heading-2 text-center">Simple Pricing</h2>
+          <div class="pricing-grid">
+            <!-- Tier 1 -->
+            <div class="card pricing-card animate-on-scroll delay-100">
+              <h3>Starter</h3>
+              <p class="price">$499</p>
+              <p class="desc">Perfect for student portfolios</p>
+              <ul class="features">
+                <li>Custom Design</li>
+                <li>3 Pages</li>
+                <li>Mobile Responsive</li>
+              </ul>
+              <a href="contact.html" class="btn btn-secondary full-width">Get Started</a>
+            </div>
+
+            <!-- Tier 2 -->
+            <div class="card pricing-card featured animate-on-scroll delay-200">
+              <div class="badge-pop">Most Popular</div>
+              <h3>Growth</h3>
+              <p class="price">$1,200</p>
+              <p class="desc">For serious businesses</p>
+              <ul class="features">
+                <li>5-7 Pages</li>
+                <li>SEO Optimization</li>
+                <li>CMS Integration</li>
+                <li>Analytics Setup</li>
+              </ul>
+              <a href="contact.html" class="btn btn-primary full-width">Get Started</a>
+            </div>
+
+            <!-- Tier 3 -->
+            <div class="card pricing-card animate-on-scroll delay-300">
+              <h3>Pro</h3>
+              <p class="price">Custom</p>
+              <p class="desc">Complex web apps & scale</p>
+              <ul class="features">
+                <li>Full Stack Dev</li>
+                <li>Custom Functionality</li>
+                <li>Priority Support</li>
+              </ul>
+              <a href="contact.html" class="btn btn-secondary full-width">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section about-section">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-content animate-on-scroll">
+              <h2 class="heading-2">Built in College Station.<br><span class="text-primary">Designed for Impact.</span>
+              </h2>
+              <div class="about-narrative">
+                <p class="lead-text" style="color: var(--color-dark); font-weight: 500;">
+                  Bridging the gap between fresh academic insight and professional execution.
+                </p>
+                <p>
+                  We are a team of Texas A&M students and emerging developers passionate about building modern websites
+                  that make a real impact. What sets us apart is the combination of hands-on technical experience and a
+                  genuine understanding of the College Station community.
+                </p>
+                <p>
+                  We know that for many businesses, a website isn't about trends—it's about growth. That’s why we focus
+                  on clean design, reliable code, and clear communication. Whether you're a local business or a fellow
+                  student, we build solutions that last.
+                </p>
+              </div>
+            </div>
+            <div class="about-values animate-on-scroll delay-200">
+              <div class="value-card">
+                <div class="value-number">01</div>
+                <div class="value-text">
+                  <h3>Engineering First</h3>
+                  <p>Built with the rigor of engineering students. Fast, secure, and scalable code.</p>
+                </div>
+              </div>
+              <div class="value-card">
+                <div class="value-number">02</div>
+                <div class="value-text">
+                  <h3>Design Forward</h3>
+                  <p>Modern aesthetics that capture your brand identity and hold attention.</p>
+                </div>
+              </div>
+              <div class="value-card">
+                <div class="value-number">03</div>
+                <div class="value-text">
+                  <h3>Community Focused</h3>
+                  <p>We know College Station. We build for the people and businesses that make this town special.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- CTA Band -->
+      <section class="cta-band">
+        <div class="container cta-content">
+          <h2 class="heading-2" style="color: var(--color-bg);">Want a stunning website without the headache?</h2>
+          <a href="contact.html" class="btn btn-primary">Get a Free Demo</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <img src="public/logo.png" alt="Aggie Creators" class="logo-sm"
+            style="filter: brightness(0) saturate(100%) invert(83%) sepia(21%) saturate(268%) hue-rotate(349deg) brightness(87%) contrast(85%); width: 32px; height: auto;">
+          <p>Aggie Creators</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-copy">
+          &copy; 2026 Aggie Creators. Built in College Station.
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
