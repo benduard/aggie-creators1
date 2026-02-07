@@ -694,3 +694,8 @@ ul {
     padding-top: 24px;
     border-top: 1px solid rgba(175, 162, 143, 0.1);
 }
+/* API Quota Workaround: Color correction for iPad mockup blue hue */
+img[src*="gilberts-ipad-mockup.png"] {
+    filter: sepia(0.15) saturate(1.1) hue-rotate(-5deg) contrast(1.05);
+}
+
