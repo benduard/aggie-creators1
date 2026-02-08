@@ -37,7 +37,7 @@
         </nav>
 
         <div class="header-actions">
-          <a href="#contact" class="btn btn-primary">Get a Free Demo</a>
+          <a href="contact.html" class="btn btn-primary">Start Your Project</a>
         </div>
 
         <!-- Mobile Menu Toggle -->
@@ -53,7 +53,7 @@
             <a href="#work" class="mobile-link">Work</a>
             <a href="#process" class="mobile-link">Process</a>
             <a href="#pricing" class="mobile-link">Pricing</a>
-            <a href="#contact" class="mobile-link btn btn-primary">Get a Free Demo</a>
+            <a href="contact.html" class="mobile-link btn btn-primary">Start Your Project</a>
           </nav>
         </div>
       </div>
@@ -70,7 +70,7 @@
               Clean design. Modern builds. Real results.</p>
             <div class="hero-buttons delay-200">
               <a href="#work" class="btn btn-primary">View Work</a>
-              <a href="#contact" class="btn btn-secondary">Get a Free Demo</a>
+              <a href="contact.html" class="btn btn-secondary">Start Your Project</a>
             </div>
           </div>
           <div class="hero-visual animate-on-scroll delay-300">
@@ -148,27 +148,9 @@
                 <p>Real Estate • Modern Hero Design</p>
               </div>
             </div>
-            <!-- Work Item 1 -->
-            <div class="work-card animate-on-scroll delay-100">
-              <div class="work-img-wrapper">
-                <img src="portfolio-mockup.png" alt="Reveille Portfolio Project" class="work-img">
-              </div>
-              <div class="work-info">
-                <h4>Reveille Portfolio</h4>
-                <p>Student Portfolio • 300% Engagement Increase</p>
-              </div>
-            </div>
 
-            <!-- Work Item 2 -->
-            <div class="work-card animate-on-scroll delay-200">
-              <div class="work-img-wrapper">
-                <img src="cafe-mockup.png" alt="Century Square Cafe Project" class="work-img">
-              </div>
-              <div class="work-info">
-                <h4>Century Square Cafe</h4>
-                <p>Local Business • Online Ordering Integration</p>
-              </div>
-            </div>
+
+
           </div>
         </div>
       </section>
@@ -442,11 +424,38 @@
       <section id="pricing" class="section pricing-section">
         <div class="container">
           <h2 class="heading-2 text-center">Simple Pricing</h2>
+          <div class="sale-banner animate-on-scroll">
+            <span class="sale-text">Spring Sale Ends In:</span>
+            <div class="countdown-timer" id="countdown">
+              <div class="time-block">
+                <span class="time" id="days">00</span>
+                <span class="label">Days</span>
+              </div>
+              <span class="separator">:</span>
+              <div class="time-block">
+                <span class="time" id="hours">00</span>
+                <span class="label">Hrs</span>
+              </div>
+              <span class="separator">:</span>
+              <div class="time-block">
+                <span class="time" id="minutes">00</span>
+                <span class="label">Mins</span>
+              </div>
+              <span class="separator">:</span>
+              <div class="time-block">
+                <span class="time" id="seconds">00</span>
+                <span class="label">Secs</span>
+              </div>
+            </div>
+          </div>
           <div class="pricing-grid">
             <!-- Tier 1 -->
             <div class="card pricing-card animate-on-scroll delay-100">
               <h3>Starter</h3>
-              <p class="price">$499</p>
+              <div class="price-wrapper">
+                <span class="original-price">$499</span>
+                <p class="price sale-price">$249</p>
+              </div>
               <p class="desc">Perfect for student portfolios</p>
               <ul class="features">
                 <li>Custom Design</li>
@@ -460,7 +469,10 @@
             <div class="card pricing-card featured animate-on-scroll delay-200">
               <div class="badge-pop">Most Popular</div>
               <h3>Growth</h3>
-              <p class="price">$1,200</p>
+              <div class="price-wrapper">
+                <span class="original-price">$1,200</span>
+                <p class="price sale-price">$599</p>
+              </div>
               <p class="desc">For serious businesses</p>
               <ul class="features">
                 <li>5-7 Pages</li>
@@ -542,7 +554,7 @@
       <section class="cta-band">
         <div class="container cta-content">
           <h2 class="heading-2" style="color: var(--color-bg);">Want a stunning website without the headache?</h2>
-          <a href="contact.html" class="btn btn-primary">Get a Free Demo</a>
+          <a href="contact.html" class="btn btn-primary">Start Your Project</a>
         </div>
       </section>
     </main>

@@ -694,8 +694,95 @@ ul {
     padding-top: 24px;
     border-top: 1px solid rgba(175, 162, 143, 0.1);
 }
+
 /* API Quota Workaround: Color correction for iPad mockup blue hue */
 img[src*="gilberts-ipad-mockup.png"] {
     filter: sepia(0.15) saturate(1.1) hue-rotate(-5deg) contrast(1.05);
 }
+/* Spring Sale & Countdown */
+.sale-banner {
+  background: var(--color-primary);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 0 auto 48px;
+  box-shadow: 0 4px 20px rgba(80, 0, 0, 0.2);
+  width: fit-content;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-wrap: wrap;
+}
 
+.sale-text {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+
+.countdown-timer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 40px;
+}
+
+.time-block .time {
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.time-block .label {
+  font-size: 0.7rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.countdown-timer .separator {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: -14px; /* Align with numbers visually */
+}
+
+/* Sale Pricing */
+.price-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.sale-price {
+  color: var(--color-primary);
+  margin-top: -4px;
+}
+
+@media (max-width: 768px) {
+  .sale-banner {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 20px;
+  }
+}
