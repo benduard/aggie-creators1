@@ -786,3 +786,199 @@ img[src*="gilberts-ipad-mockup.png"] {
     padding: 20px;
   }
 }
+
+/* Tubelight Navbar */
+.tubelight-navbar-container {
+    position: fixed;
+    top: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    padding-top: 24px;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .tubelight-navbar-container {
+        top: auto;
+        bottom: 24px;
+        padding-top: 0;
+    }
+}
+
+.tubelight-navbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05); /* bg-background/5 */
+    border: 1px solid rgba(48, 49, 69, 0.1); /* border-border */
+    backdrop-filter: blur(12px); /* backdrop-blur-lg */
+    padding: 4px;
+    border-radius: 9999px; /* rounded-full */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+}
+
+.nav-item {
+    position: relative;
+    cursor: pointer;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 600; /* font-semibold */
+    padding: 8px 24px;
+    border-radius: 9999px; /* rounded-full */
+    transition: color 0.3s ease;
+    color: rgba(48, 49, 69, 0.8); /* text-foreground/80 */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item:hover {
+    color: var(--color-primary); /* hover:text-primary */
+}
+
+.nav-item.active {
+    color: var(--color-primary);
+    background-color: rgba(48, 49, 69, 0.05); /* bg-muted approx */
+}
+
+.nav-text {
+    display: none;
+}
+
+.nav-icon {
+    display: block;
+    line-height: 0;
+}
+
+@media (min-width: 768px) {
+    .nav-text {
+        display: inline;
+    }
+    .nav-icon {
+        display: none;
+    }
+}
+
+/* Lamp Effect */
+.lamp-effect {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    border-radius: 9999px;
+    z-index: -10;
+    background-color: rgba(85, 26, 28, 0.05); /* bg-primary/5 */
+    display: none; /* Hidden by default, shown on active */
+    pointer-events: none;
+}
+
+.nav-item.active .lamp-effect {
+    display: block;
+    animation: fade-in 0.3s ease-out;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.lamp-line {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32px; /* w-8 */
+    height: 4px; /* h-1 */
+    background-color: var(--color-primary);
+    border-top-left-radius: 999px;
+    border-top-right-radius: 999px;
+}
+
+.lamp-glow-1 {
+    position: absolute;
+    width: 48px; /* w-12 */
+    height: 24px; /* h-6 */
+    background-color: rgba(85, 26, 28, 0.2); /* bg-primary/20 */
+    border-radius: 999px;
+    filter: blur(12px); /* blur-md */
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lamp-glow-2 {
+    position: absolute;
+    width: 32px; /* w-8 */
+    height: 24px; /* h-6 */
+    background-color: rgba(85, 26, 28, 0.2);
+    border-radius: 999px;
+    filter: blur(12px);
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lamp-glow-3 {
+    position: absolute;
+    width: 16px; /* w-4 */
+    height: 16px; /* h-4 */
+    background-color: rgba(85, 26, 28, 0.2);
+    border-radius: 999px;
+    filter: blur(4px); /* blur-sm */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Refined Sliding Lamp Effect */
+.tubelight-navbar {
+    position: relative; /* Context for absolute lamp */
+    z-index: 1001;
+}
+
+/* Single shared lamp container */
+.lamp-effect {
+    position: absolute;
+    top: 50%; /* Center vertically approx */
+    left: 0;
+    transform: translateY(-50%); /* Adjust based on height */
+    height: 100%;
+    z-index: -1; 
+    pointer-events: none;
+    transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1), width 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.2s ease;
+    opacity: 0; /* Hidden initially until JS positions it */
+    display: block !important; /* Override previous toggle */
+    /* Lamp specific positioning override */
+    top: 0;
+    transform: none;
+    border-radius: 9999px;
+}
+
+/* Internal parts of the lamp need to be positioned relative to the container */
+.lamp-line {
+    top: -4px; /* Move up slightly */
+    width: 40%;
+    margin-left: 30%;
+    transition: width 0.3s ease;
+}
+
+.lamp-glow-1 {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.lamp-glow-2 {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.lamp-glow-3 {
+    width: 30%;
+    margin-left: 35%;
+}
+
+/* Active State Text Color (override old specific rule) */
+.nav-item.active {
+    background-color: transparent !important; /* Let lamp provide bg */
+    color: var(--color-primary) !important;
+}
