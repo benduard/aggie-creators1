@@ -67,6 +67,10 @@ body.menu-open .mobile-menu {
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
+.mobile-link.btn-primary {
+    color: var(--color-bg);
+}
+
 /* Staggered animation for links */
 body.menu-open .mobile-link:nth-child(1) {
     transition-delay: 0.1s;

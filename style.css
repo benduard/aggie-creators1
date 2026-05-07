@@ -265,6 +265,7 @@ ul {
     font-weight: 800;
     font-size: 1.25rem;
     color: var(--color-dark);
+    text-decoration: none;
 }
 
 .logo {
