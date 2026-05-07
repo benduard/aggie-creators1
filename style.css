@@ -62,6 +62,8 @@
 body {
     font-family: var(--font-main);
     background-color: var(--color-bg);
+    background-image: radial-gradient(circle at top right, rgba(85, 26, 28, 0.03) 0%, transparent 40%),
+                      radial-gradient(circle at bottom left, rgba(85, 26, 28, 0.03) 0%, transparent 40%);
     color: var(--color-text);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -416,23 +418,33 @@ ul {
 
 .card {
     padding: 32px;
-    background-color: var(--color-bg);
-    border: 1px solid rgba(48, 49, 69, 0.1);
-    border-radius: 12px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(48, 49, 69, 0.05);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px -8px var(--shadow-color);
-    border-color: rgba(48, 49, 69, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(48, 49, 69, 0.12);
+    border-color: rgba(255, 255, 255, 0.8);
 }
 
 .icon-box {
-    font-size: 2rem;
     margin-bottom: 24px;
     color: var(--color-primary);
-    /* Fallback/Addition */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box svg {
+    width: 36px;
+    height: 36px;
+    stroke-width: 1.5;
 }
 
 /* Work Section */
@@ -552,10 +564,22 @@ ul {
     font-weight: 500;
 }
 
+.why-list li {
+    display: flex;
+    align-items: center;
+}
+
 .check-icon {
     color: var(--color-primary);
     margin-right: 12px;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-icon svg {
+    width: 24px;
+    height: 24px;
 }
 
 /* Pricing */
@@ -645,33 +669,59 @@ ul {
 
 /* Footer */
 .footer {
-    background-color: var(--color-dark);
+    background: linear-gradient(135deg, var(--color-dark) 0%, #171825 100%);
     color: var(--color-bg);
-    /* #AFA28F */
-    padding: 64px 0 32px 0;
+    padding: 48px 0;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
 }
 
 .footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
     align-items: center;
     text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
+        grid-template-columns: auto 1fr auto;
         text-align: left;
-        align-items: flex-start;
+    }
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+@media (min-width: 1024px) {
+    .footer-brand {
+        flex-direction: row;
+        gap: 24px;
+    }
+    .footer-brand .social-links {
+        margin-top: 0 !important;
     }
 }
 
 .footer-brand p {
     font-weight: 700;
-    font-size: 1.2rem;
-    margin-top: 12px;
+    font-size: 1.15rem;
+    margin-top: 0;
+    letter-spacing: 0.02em;
 }
 
 .footer-links {
@@ -681,18 +731,48 @@ ul {
     justify-content: center;
 }
 
+.footer-links a {
+    color: var(--color-white-sub);
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
 .footer-links a:hover {
-    text-decoration: underline;
+    color: var(--color-bg);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.social-links a {
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 4px 8px rgba(85, 26, 28, 0.5));
+    color: #ff4d4f !important;
+    opacity: 1 !important;
 }
 
 .footer-copy {
-    opacity: 0.6;
+    opacity: 0.7;
     font-size: 0.9rem;
-    margin-top: 40px;
+    margin-top: 16px;
     width: 100%;
     text-align: center;
     padding-top: 24px;
-    border-top: 1px solid rgba(175, 162, 143, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 1024px) {
+    .footer-copy {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+        text-align: right;
+        width: auto;
+    }
 }
 
 /* API Quota Workaround: Color correction for iPad mockup blue hue */
@@ -706,16 +786,13 @@ img[src*="gilberts-ipad-mockup.png"] {
     color: white;
     padding: 16px 24px;
     border-radius: 12px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 24px;
     margin: 0 auto 48px;
     box-shadow: 0 4px 20px rgba(80, 0, 0, 0.2);
     width: fit-content;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
     flex-wrap: wrap;
 }
 
